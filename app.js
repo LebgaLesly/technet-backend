@@ -6,9 +6,7 @@ const cors = require('cors');
 const productRoutes = require('./Routes/ProductsRoutes')
 const userRoutes = require('./Routes/UserRoutes')
 const corsOptions = {
-  origin: 'https://master.d2sb0ghkw4k0bw.amplifyapp.com/',
-  optionsSuccessStatus: 200,
-  methods: "GET, PUT"
+  origin: true
 }
 
 // init app & middleware

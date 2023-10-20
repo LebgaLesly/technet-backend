@@ -7,7 +7,8 @@ const productRoutes = require('./Routes/ProductsRoutes')
 const userRoutes = require('./Routes/UserRoutes')
 const corsOptions = {
   origin: 'https://master.d2sb0ghkw4k0bw.amplifyapp.com/',
-  optionsSuccessStatus: 200 // For legacy browser support
+  optionsSuccessStatus: 200,
+  methods: "GET, PUT"
 }
 
 // init app & middleware

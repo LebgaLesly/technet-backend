@@ -9,7 +9,13 @@ const userRoutes = require('./Routes/UserRoutes')
 // init app & middleware
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+
+}));
 
 //connecting to database
 mongoose.connect(process.env.URI).then(() => {

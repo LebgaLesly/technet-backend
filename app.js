@@ -13,6 +13,11 @@ const corsOptions = {
 const app = express();
 app.use(express.json());
 app.use(cors(corsOptions));
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 //connecting to database
 mongoose.connect(process.env.URI).then(() => {
